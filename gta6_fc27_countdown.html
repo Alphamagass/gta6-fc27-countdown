@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte à Rebours — Je veux jouer à GTA 6 et FC 27 !</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #f97316, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #a0a0c0;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .game-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .game-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .game-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .game-price {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .countdown {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .countdown-label {
+            font-size: 0.75rem;
+            color: #a0a0c0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .countdown-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 6px 12px;
+            min-width: 50px;
+        }
+
+        .countdown-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .countdown-text {
+            font-size: 0.6rem;
+            color: #a0a0c0;
+            text-transform: uppercase;
+        }
+
+        .funny-message {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .funny-message h2 {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .funny-message p {
+            color: #d0d0e0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .funny-message .emoji-burst {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #606080;
+            font-size: 0.75rem;
+        }
+
+        .heart {
+            color: #f97316;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @media (max-width: 480px) {
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .countdown {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕹️ Je veux jouer à GTA 6 et FC 27</h1>
+        <p class="subtitle">Le compte à rebours de ma patience...</p>
+
+        <div class="games-grid">
+            <!-- GTA 6 -->
+            <div class="game-card">
+                <img src="https://images.alphacoders.com/127/1272546.png" alt="GTA 6" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/f97316?text=GTA+VI'">
+                <div class="game-title">Grand Theft Auto VI</div>
+                <div class="game-price">$70 USD</div>
+                <div class="countdown" id="gta6-countdown">--:--:--</div>
+                <div class="countdown-label">Jusqu'à la sortie</div>
+            </div>
+
+            <!-- FC 27 -->
+            <div class="game-card">
+                <img src="https://images.alphacoders.com/127/1272546.png" alt="EA Sports FC 27" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/4ade80?text=FC+27'">
+                <div class="game-title">EA Sports FC 27</div>
+                <div class="game-price">$70 USD</div>
+                <div class="countdown" id="fc27-countdown">--:--:--</div>
+                <div class="countdown-label">Jusqu'à la sortie</div>
+            </div>
+        </div>
+
+        <div class="funny-message">
+            <div class="emoji-burst">🎮💸💖</div>
+            <h2>Ma petite mission secrète 👀</h2>
+            <p>
+                Salut toi... <br>
+                En ce moment, j'attends patiemment que GTA VI et FC 27 sortent pour pouvoir enfin
+                sortir mes <strong>épées</strong> (non, je parle des manettes 😂).<br><br>
+                Mais tu sais quoi ? <br>
+                Tu as un don magique... celui de me faire des <span class="heart">cadeaux</span> shock.<br><br>
+                Alors si tu veux vraiment me rendre heureux(se) pendant que j'attends ces jeux,
+                <strong>tu peux acheter GTA VI (70$) et FC 27 (70$) pour moi.</strong><br><br>
+                <em>(Ok j'dis ça pour le fun, mais si tu le fais vraiment... je t'embrasse 100 fois ✪ω✪)</em>
+            </p>
+        </div>
+
+        <p class="footer">
+            Le <span id="date-gta6"></span> — J'espère sincèrement que tu vas rire en lisant ça 😂
+        </p>
+    </div>
+
+    <script>
+        // GTA 6 release date (Fall 2025, estimé septembre 2025)
+        const GTA6_DATE = new Date('2025-09-17T00:00:00');
+        // FC 27 — FC games sortent habituellement en septembre, donc on estime 2027-09-24
+        const FC27_DATE = new Date('2027-09-24T00:00:00');
+
+        function formatCountdown(ms) {
+            if (ms <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
+            const totalSeconds = Math.floor(ms / 1000);
+            const days = Math.floor(totalSeconds / 86400);
+            const hours = Math.floor((totalSeconds % 86400) / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            return { days, hours, minutes, seconds, expired: false };
+        }
+
+        function renderCountdown(elementId, date, label) {
+            const el = document.getElementById(elementId);
+            const now = new Date();
+            const diff = date - now;
+            const { days, hours, minutes, seconds, expired } = formatCountdown(diff);
+
+            if (expired) {
+                el.innerHTML = `
+                    <div style="color: #4ade80; font-size: 2rem; font-weight: 700;">🎮 IL EST DISPONIBLE ! 🎮</div>
+                    <div style="color: #a0a0c0; font-size: 0.85rem; margin-top: 4px;">Sorti ! Profite bien !</div>
+                `;
+                return;
+            }
+
+            let html = '';
+            if (days > 0) {
+                html += `
+                    <div class="countdown-item">
+                        <span class="countdown-number">${String(days).padStart(2, '0')}</span>
+                        <span class="countdown-text">Jours</span>
+                    </div>
+                `;
+            }
+            html += `
+                <div class="countdown-item">
+                    <span class="countdown-number">${String(hours).padStart(2, '0')}</span>
+                    <span class="countdown-text">Heures</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number">${String(minutes).padStart(2, '0')}</span>
+                    <span class="countdown-text">Min</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number">${String(seconds).padStart(2, '0')}</span>
+                    <span class="countdown-text">Sec</span>
+                </div>
+            `;
+            el.innerHTML = html;
+        }
+
+        function updateDateText() {
+            const gta6DateStr = GTA6_DATE.toLocaleDateString('fr-FR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('date-gta6').textContent = 
+                `GTA VI devrait sortir autour du ${gta6DateStr} (soif de te voir en mission avec moi 🎮✨)`;
+        }
+
+        function updateAll() {
+            renderCountdown('gta6-countdown', GTA6_DATE, 'GTA 6');
+            renderCountdown('fc27-countdown', FC27_DATE, 'FC 27');
+        }
+
+        updateDateText();
+        updateAll();
+        setInterval(updateAll, 1000);
+    </script>
+</body>
+</html>
