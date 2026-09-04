@@ -189,7 +189,7 @@
         <div class="games-grid">
             <!-- GTA 6 -->
             <div class="game-card">
-                <img src="https://images.alphacoders.com/127/1272546.png" alt="GTA 6" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/f97316?text=GTA+VI'">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Grand_Theft_Auto_VI_Official_Logo.png/800px-Grand_Theft_Auto_VI_Official_Logo.png" alt="GTA 6" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/f97316?text=GTA+VI'">
                 <div class="game-title">Grand Theft Auto VI</div>
                 <div class="game-price">$70 USD</div>
                 <div class="countdown" id="gta6-countdown">--:--:--</div>
@@ -198,7 +198,7 @@
 
             <!-- FC 27 -->
             <div class="game-card">
-                <img src="https://images.alphacoders.com/127/1272546.png" alt="EA Sports FC 27" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/4ade80?text=FC+27'">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/EA_Sports_FC_25_cover.jpg/800px-EA_Sports_FC_25_cover.jpg" alt="EA Sports FC 27" class="game-image" onerror="this.src='https://placehold.co/300x170/1a1a3e/4ade80?text=FC+27'">
                 <div class="game-title">EA Sports FC 27</div>
                 <div class="game-price">$70 USD</div>
                 <div class="countdown" id="fc27-countdown">--:--:--</div>
@@ -208,14 +208,11 @@
 
         <div class="funny-message">
             <div class="emoji-burst">😭😭😭</div>
-            <h2>Sa top quand même 🙏</h2>
-            <p>
-                Si je meurs, ne pleure pas.<br>
-                Si je te demande autre chose, insulte-moi.<br>
-                Mais faut SCIENCER sur un des deux...<br><br>
-                <strong>GTA VI (70$) — FC 27 (70$)</strong><br><br>
-                Je sais que c'est pas moi qui ai inventé la formule mais
-                de toute façon faut soit l'un soit l'autre absolument 😭😭😭😭😭😭😭
+            <p>Si je meurs, ne pleure pas.<br>
+            Si je te demande autre chose, insulte-moi.<br>
+            Mais faut SCIENCER sur un des deux... 😭😭😭😭😭😭😭</p>
+            <p style="font-size: 1.1rem; font-weight: 600; color: #fbbf24; margin-top: 10px;">
+                GTA VI (70$) — FC 27 (70$)
             </p>
         </div>
 
@@ -227,8 +224,8 @@
     <script>
         // GTA 6 release date : 19 novembre 2026
         const GTA6_DATE = new Date('2026-11-19T00:00:00');
-        // FC 27 — FC games sortent habituellement en septembre, donc on estime 2027-09-24
-        const FC27_DATE = new Date('2027-09-24T00:00:00');
+        // FC 27 — EA Sports FC sortent habituellement en septembre, on estime 27 sept. 2027
+        const FC27_DATE = new Date('2027-09-27T00:00:00');
 
         function formatCountdown(ms) {
             if (ms <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
